@@ -1,20 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { CanvasComponent } from './canvas/canvas.component';
-
+import { FlowComponent } from './flow/flow.component';
+import { ContextMenuModule, ContextMenuService } from 'ngx-contextmenu';
+import { BorderColorDirective } from './shared/directives/border-color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CanvasComponent
+    FlowComponent,
+    BorderColorDirective
   ],
-  imports: [
-    BrowserModule
+  imports     : [
+    BrowserModule,
+    FormsModule,
+    ContextMenuModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers   : [ContextMenuService],
+  bootstrap   : [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

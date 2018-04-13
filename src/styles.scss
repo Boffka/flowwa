@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+//@import "../node_modules/jsplumb/dist/css/jsplumbtoolkit-defaults.css";
+//@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+.jtk-endpoint{
+  opacity: 0.97;
+  z-index: 310!important;
+}
+.ngx-contextmenu{
+  .dropdown-menu {
+    border: solid 2px #dadadb;
+    background-color: #eeeeef;
+    padding: 0;
+    box-shadow: 2px 2px 19px #aaa;
+    -o-box-shadow: 2px 2px 19px #aaa;
+    -webkit-box-shadow: 2px 2px 19px #aaa;
+    -moz-box-shadow: 2px 2px 19px #aaa;
+  }
+  li {
+    display: block;
+    padding: 0;
+    /*border-top: solid 1px chartreuse;*/
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    &:first-child {
+      border-top:none;
+    }
+    span{
+      padding: 0!important;
+    }
+    input{
+      padding: 10px;
+      border: none;
+      background: #f9f9fa;
+      border-bottom: 1px dotted #dadadb;
+    }
+  }
+  a {
+    color:#666666;
+    display: block;
+    padding: 0.5em 1em;
+    &:hover {
+      color: #5d5d5d;
+      background-color:#dadadb;
+    }
+
+  }
+}
+

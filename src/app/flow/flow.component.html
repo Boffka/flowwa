@@ -1,0 +1,39 @@
+<div class="jtk-demo-canvas canvas-wide flowchart-board jtk-surface jtk-surface-nopan" id="canvas">
+  <div #blocksIterator
+       class="window jtk-node"
+       *ngFor="let item of blocks"
+       id="flowchartWindow{{item.id}}"
+       [ngStyle]="{'top':item.position.top+'em', 'left':item.position.left+'em'}"
+       [ngClass]="{'circle':item.view === 'circle'}"
+       [borderColor]="item.borderColor"
+
+       [contextMenu]="basicMenu" [contextMenuSubject]="item">
+    <section>
+      <div class="top-line">
+        <span class="icon">
+          <svg width="10" height="10"><use attr.xlink:href="/assets/img/icons.svg#{{item.type}}"/></svg>
+        </span>
+        <span class="top-line-text">{{item.name}}</span>
+      </div>
+      <div class="bottom-line">
+        <span>{{item.rules}} rule(s)</span>
+      </div>
+    </section>
+  </div>
+</div>
+
+<context-menu>
+  <ng-template contextMenuItem let-item passive="true">
+    <input type="text" [(ngModel)]="item.name">
+  </ng-template>
+  <ng-template contextMenuItem let-item passive="true">
+    <input type="text" [(ngModel)]="item.borderColor">
+  </ng-template>
+  <ng-template contextMenuItem divider="true"></ng-template>
+  <ng-template contextMenuItem (execute)="switchView($event)">
+    Circle/Rectangle
+  </ng-template>
+  <ng-template contextMenuItem (execute)="removeBlock($event.item)">
+    Remove
+  </ng-template>
+</context-menu>

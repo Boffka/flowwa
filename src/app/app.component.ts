@@ -1,10 +1,33 @@
 import { Component } from '@angular/core';
+import * as Data from './data.json';
 
 @Component({
-  selector: 'app-root',
+  selector   : 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls  : ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  blocks = Data;
+  blocksIndex = 0;
+
+  constructor() {
+  }
+
+  addNode() {
+    const id = this.blocks.length + 1;
+    this.blocks.push(
+      {
+        id         : id,
+        rules      : 26,
+        name       : `Block ${id}`,
+        type       : 'marker',
+        connection : {in: false, out: false},
+        position   : {top: 1, left: 14 + this.blocksIndex * 7},
+        view       : 'rectangle',
+        borderColor: '#6faa93'
+      }
+    );
+    this.blocksIndex++;
+  }
+
 }

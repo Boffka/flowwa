@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "rules": 50,
+    "name": "Block 1",
+    "type": "chart",
+    "connection": {
+      "in": false,
+      "out": 2
+    },
+    "position": {
+      "top": 7,
+      "left": 7
+    },
+    "view": "rectangle",
+    "borderColor": "#6faa93"
+  },
+  {
+    "id": 2,
+    "rules": 27,
+    "name": "Block 2 long test",
+    "type": "diagram",
+    "connection": {
+      "in": 1,
+      "out": 3
+    },
+    "position": {
+      "top": 7,
+      "left": 21
+    },
+    "view": "rectangle",
+    "borderColor": "#F03434"
+  },
+  {
+    "id": 3,
+    "rules": 35,
+    "name": "Block 3",
+    "type": "diagram",
+    "connection": {
+      "in": 2,
+      "out": 4
+    },
+    "position": {
+      "top": 7,
+      "left": 35
+    },
+    "view": "rectangle",
+    "borderColor": "#6faa93"
+  },
+  {
+    "id": 4,
+    "rules": 0,
+    "name": "Block 4",
+    "type": "marker",
+    "connection": {
+      "in": false,
+      "out": 8
+    },
+    "position": {
+      "top": 14,
+      "left": 55
+    },
+    "view": "rectangle",
+    "borderColor": "#6faa93"
+  },
+  {
+    "id": 5,
+    "rules": 23,
+    "name": "Block 5",
+    "type": "chart",
+    "connection": {
+      "in": false,
+      "out": 6
+    },
+    "position": {
+      "top": 21,
+      "left": 7
+    },
+    "view": "rectangle",
+    "borderColor": "#6faa93"
+  },
+  {
+    "id": 6,
+    "rules": 41,
+    "name": "Block 6",
+    "type": "marker",
+    "connection": {
+      "in": false,
+      "out": 7
+    },
+    "position": {
+      "top": 21,
+      "left": 21
+    },
+    "view": "rectangle",
+    "borderColor": "#6faa93"
+  },
+  {
+    "id": 7,
+    "rules": 83,
+    "name": "Block 7",
+    "type": "chart",
+    "connection": {
+      "in": false,
+      "out": 4
+    },
+    "position": {
+      "top": 21,
+      "left": 35
+    },
+    "view": "rectangle",
+    "borderColor": "#6faa93"
+  },
+  {
+    "id": 8,
+    "rules": 26,
+    "name": "Block 8",
+    "type": "marker",
+    "connection": {
+      "in": false,
+      "out": false
+    },
+    "position": {
+      "top": 14,
+      "left": 70
+    },
+    "view": "circle",
+    "borderColor": "#6faa93"
+  }
+]
