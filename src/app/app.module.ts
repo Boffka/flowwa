@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FlowComponent } from './flow/flow.component';
 import { ContextMenuModule, ContextMenuService } from 'ngx-contextmenu';
 import { BorderColorDirective } from './shared/directives/border-color.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { BorderColorDirective } from './shared/directives/border-color.directive
   imports     : [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     ContextMenuModule
   ],
   providers   : [ContextMenuService],

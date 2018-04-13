@@ -1,16 +1,22 @@
-import { Component } from '@angular/core';
-import * as Data from './data.json';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector   : 'app-root',
   templateUrl: './app.component.html',
   styleUrls  : ['./app.component.scss']
 })
-export class AppComponent {
-  blocks = Data;
+export class AppComponent implements OnInit{
+  blocks = [];
   blocksIndex = 0;
 
-  constructor() {
+  constructor(private http: HttpClient) {
+  }
+
+  ngOnInit(){
+     this.http.get('/assets/data.json').subscribe((data: any)=>{
+       this.blocks = data;
+    });
   }
 
   addNode() {
